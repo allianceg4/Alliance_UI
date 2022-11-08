@@ -1,0 +1,11 @@
+.filler {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 10px;
+}
+
+mat-toolbar{
+  background-color: rgb(112, 122, 179);
+  color: white;
+}

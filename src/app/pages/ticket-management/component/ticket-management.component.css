@@ -1,0 +1,38 @@
+
+.mat-column-btn{
+  width: 20%;
+}
+
+.sidebtn{
+  margin-left: 20px;
+  text-align: center;
+}
+
+.sidebtn.delete{
+  background-color: rgb(231, 92, 92);
+}
+
+.sidebtn.edit{
+  background-color: rgb(94, 193, 75);
+}
+
+table {
+  width: 85%;
+  margin: 0% 0% 0% 8%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.topbtns{
+  margin: 5% 0% 1% 10%;
+  font-family: Helvetica;
+}
+
+.topbtn{
+  margin: 0% 1.5% 0% 0%;
+  height: 35px;
+  background-color: rgb(112, 122, 179);
+  color: white;
+}
