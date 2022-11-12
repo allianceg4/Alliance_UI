@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TicketElement } from 'src/app/models/ticket.model';
-
+import { MatDialog } from '@angular/material/dialog'
+import { AddTicketFormComponent } from '../../../add-ticket-form/add-ticket-form.component';
 const ELEMENT_DATA: TicketElement[] = [
   {id: 101, assignee: 'Maria Uy', status: 'Available', subject: 'Recruit Report', description: 'Report for Recruit', tracker: 'AUD6', btn1: 'edit', btn2:'delete'},
   {id: 201, assignee: 'Jose Yep', status: 'Unavailable', subject: 'Sales Report', description: 'Report for Sales', tracker: '8WSA', btn1: 'edit', btn2:'delete'},
@@ -20,5 +21,11 @@ export class TicketManagementComponent {
   displayedColumns: string[] = ['id', 'assignee', 'status', 'subject', 'description', 'tracker', 'btn'];
   dataSource = ELEMENT_DATA;
 
-  constructor() {}
+  constructor(private addDialog: MatDialog) { }
+
+  onAddTicket(){
+    this.addDialog.open(AddTicketFormComponent)
+  }
+
+
 }
