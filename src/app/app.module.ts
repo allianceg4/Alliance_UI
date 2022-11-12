@@ -31,7 +31,7 @@ const materialModules = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginPageComponent,
+    LoginPageComponent,   
   ],
 
   imports: [

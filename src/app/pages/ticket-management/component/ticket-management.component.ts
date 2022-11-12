@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { TicketElement } from 'src/app/models/ticket.model';
+import { Dialog, DialogRef } from '@angular/cdk/dialog';
+import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
+
 
 const ELEMENT_DATA: TicketElement[] = [
   {id: 101, assignee: 'Maria Uy', status: 'Available', subject: 'Recruit Report', description: 'Report for Recruit', tracker: 'AUD6', btn1: 'edit', btn2:'delete'},
@@ -20,5 +23,12 @@ export class TicketManagementComponent {
   displayedColumns: string[] = ['id', 'assignee', 'status', 'subject', 'description', 'tracker', 'btn'];
   dataSource = ELEMENT_DATA;
 
-  constructor() {}
+  constructor(public dialog: Dialog) {}
+
+  openDialog(): void {
+    this.dialog.open<string>(TicketDialogComponent);
+    console.log('delete working');
+  }
+
+  
 }
