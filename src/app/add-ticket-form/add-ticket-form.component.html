@@ -1,9 +1,0 @@
-  
-<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
-   <input name="Assignee" ngModel required #assignee="ngModel">
-   <input name="email" ngModel required #email="ngModel">
-   <br/>
-   <button>Submit</button>
-   <button type="button" (click)="resetFormValue(myForm)">Reset</button>
-   <button type="button" (click)="setDefault(myForm)">Set Default Value</button>
-</form>
