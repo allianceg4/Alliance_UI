@@ -19,6 +19,7 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
+import { EditComponent } from './edit/edit.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -36,7 +37,8 @@ const materialModules = [
     DashboardComponent,
     LoginPageComponent,
     AddTicketFormComponent,
-    LoginPageComponent,   
+    LoginPageComponent,
+    EditComponent,   
   ],
 
   imports: [
