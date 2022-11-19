@@ -14,11 +14,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
+import { MatCardModule } from '@angular/material/card';
 
 const materialModules = [
   MatExpansionModule,
@@ -28,13 +28,13 @@ const materialModules = [
   MatListModule,
   MatInputModule,
   MatButtonModule,
+  MatCardModule
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginPageComponent,
     AddTicketFormComponent,
   ],
 

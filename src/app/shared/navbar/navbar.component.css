@@ -6,6 +6,11 @@
 }
 
 mat-toolbar{
-  background-color: rgb(112, 122, 179);
+  background-color: rgb(173, 6, 6);
   color: white;
+}
+
+img{
+  width: 25%;
+  margin: 8%;
 }

@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-
 const routes = [
   {
     path: '',

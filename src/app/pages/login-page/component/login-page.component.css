@@ -1,0 +1,83 @@
+/*CARD*/
+mat-card {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(51, 54, 69);
+}
+
+mat-card.app-login, mat-card.app-register {
+  width: 30%;
+  height: 70%;
+}
+
+mat-card.app-recover {
+  width: 30%;
+  height: 45%;
+}
+
+h2, p {
+  margin: 0%;
+}
+
+/*FORM*/
+mat-form-field {
+  padding: 10px 10px;
+  display: block;
+  text-decoration: none;
+}
+
+mat-form-field, .register, .submenu {
+  font-size: medium;
+}
+
+mat-checkbox{
+  padding-right: 5em;
+}
+
+.mat-button-login{
+  width: 90%;
+  padding: 6px;
+  margin: 5% 0%;
+}
+
+.mat-button-recover{
+  width: 90%;
+  padding: 6px;
+  margin: 5px 0px;
+}
+
+.link-primary{
+  cursor: pointer;
+  color: rgb(39, 126, 240);
+}
+
+.forgot-pwd{
+  text-decoration: none;
+  position: absolute;
+  right: 30px;
+}
+
+/*PAGE*/
+.login-page {
+  background: linear-gradient(rgba(96, 0, 0, 0.715), rgba(139, 0, 0, 0.731)), url("https://www.travelingcebu.com/images/cebu-it-park-buildings.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+
+}
+
+.submenu{
+  display: flex;
+  padding: 0 10px 0 11px;
+}
+
+img{
+  width: 30%;
+  position: absolute;
+  top: 38%;
+  left: 20%;
+}
+
