@@ -1,4 +1,3 @@
-
 .mat-column-btn{
   width: 20%;
 }
@@ -6,6 +5,7 @@
 .sidebtn{
   margin-left: 20px;
   text-align: center;
+  width: 10px
 }
 
 .sidebtn.delete{

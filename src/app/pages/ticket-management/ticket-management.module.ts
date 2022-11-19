@@ -5,6 +5,7 @@ import { TicketManagementComponent } from './component/ticket-management.compone
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 
 
 const routes = [
@@ -15,7 +16,7 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [TicketManagementComponent],
+  declarations: [TicketManagementComponent, TicketDialogComponent],
   imports: [
     CommonModule,
     AngularMaterialModule,
