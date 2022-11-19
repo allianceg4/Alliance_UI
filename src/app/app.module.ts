@@ -10,12 +10,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
+import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -24,13 +27,15 @@ const materialModules = [
   MatSelectModule,
   MatListModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    LoginPageComponent,
+    AddTicketFormComponent,
     LoginPageComponent,   
   ],
 
@@ -40,9 +45,10 @@ const materialModules = [
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    SharedModule
+    SharedModule,
+    materialModules,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
