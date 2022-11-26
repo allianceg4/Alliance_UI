@@ -36,7 +36,6 @@ const materialModules = [
     AppComponent,
     DashboardComponent,
     AddTicketFormComponent,
-    LoginPageComponent,   
   ],
 
   imports: [
