@@ -7,7 +7,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 
-
 const routes = [
   {
     path: '',
