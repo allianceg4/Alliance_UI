@@ -41,7 +41,7 @@
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let element">
       <button class="sidebtn edit" mat-flat-button color="primary" (click)="openEditDialog()"><mat-icon>{{element.btn1}}</mat-icon></button>
-      <button class="sidebtn delete" mat-flat-button color="primary" (click)="openDialog()"><mat-icon>{{element.btn2}}</mat-icon></button>
+      <button class="sidebtn delete" mat-flat-button color="primary" (click)="removeRow(element.id)"><mat-icon>{{element.btn2}}</mat-icon></button>
     </td>
   </ng-container>
 
