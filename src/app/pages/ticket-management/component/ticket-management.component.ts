@@ -4,7 +4,11 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
+<<<<<<< Updated upstream
  
+=======
+
+>>>>>>> Stashed changes
 const ELEMENT_DATA: TicketElement[] = [
   {
     id: 101,
@@ -75,12 +79,16 @@ export class TicketManagementComponent {
   ];
   dataSource = ELEMENT_DATA;
 
+<<<<<<< Updated upstream
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
   onAddTicket() {
     this.addDialog.open(AddTicketFormComponent);
   }
 
+=======
+  constructor(public dialog: Dialog) {}
+>>>>>>> Stashed changes
   openDialog(): void {
     this.dialog.open<string>(TicketDialogComponent);
     console.log('delete working');
