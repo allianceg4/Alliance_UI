@@ -12,6 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card';
+
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AppRoutingModule } from './shared/app-routing.module';
@@ -36,7 +38,6 @@ const materialModules = [
     AppComponent,
     DashboardComponent,
     AddTicketFormComponent,
-    LoginPageComponent,
     EditComponent,   
   ],
 
