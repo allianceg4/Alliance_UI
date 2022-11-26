@@ -91,6 +91,14 @@ export class TicketManagementComponent {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
   }
 
+  editRow(id: number) {
+    this.dataSource = this.dataSource.filter((u) => {
+      if(u.id == id){
+      }
+      return true;
+    });
+  }
+
   openEditDialog(): void {
     this.dialog.open<string>(EditComponent);
     console.log('edit working');
