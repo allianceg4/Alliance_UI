@@ -5,7 +5,7 @@ import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-tick
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 import { EditComponent } from 'src/app/edit/edit.component';
- 
+
 const ELEMENT_DATA: TicketElement[] = [
   {
     id: 101,
@@ -91,5 +91,4 @@ export class TicketManagementComponent {
     this.dialog.open<string>(EditComponent);
     console.log('edit working');
   }
-  
 }
