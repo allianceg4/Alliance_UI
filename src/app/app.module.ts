@@ -12,8 +12,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatCardModule} from '@angular/material/card';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AppRoutingModule } from './shared/app-routing.module';
@@ -22,6 +24,7 @@ import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
 import { EditComponent } from './edit/edit.component';
 import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
+import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -31,7 +34,10 @@ const materialModules = [
   MatListModule,
   MatInputModule,
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  MatTabsModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 ];
 
 @NgModule({
@@ -40,7 +46,8 @@ const materialModules = [
     DashboardComponent,
     AddTicketFormComponent,
     EditComponent,
-    SalesDashboardComponent,   
+    SalesDashboardComponent,
+    ConformSlipComponent,
   ],
 
   imports: [
