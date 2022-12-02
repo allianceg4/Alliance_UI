@@ -1,3 +1,8 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <img class="company-logo" src="https://asi-ees.com/pos_article/20171018/images/logo-asi.png">
+  </mat-sidenav>
+  <mat-sidenav-content>
 <app-navbar></app-navbar>
 
 <div class="topbtns">
@@ -48,5 +53,6 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
+</mat-sidenav-content>
+</mat-sidenav-container>
 

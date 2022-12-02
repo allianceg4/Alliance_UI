@@ -1,3 +1,8 @@
+.company-logo{
+  width: 55%;
+  margin: 8%;
+}
+
 .mat-column-btn{
   width: 20%;
 }
@@ -36,3 +41,18 @@ th.mat-sort-header-sorted {
   background-color: rgb(173, 6, 6);
   color: white;
 }
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+mat-sidenav{
+  width: 18%;
+  border-style: none;
+}
+

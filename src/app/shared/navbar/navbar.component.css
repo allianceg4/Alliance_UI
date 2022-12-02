@@ -17,3 +17,7 @@ img{
   width: 25%;
   margin: 8%;
 }
+
+mat-form-field{
+  width: 600px;
+}
