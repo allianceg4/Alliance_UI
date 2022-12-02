@@ -1,0 +1,90 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+button{
+  margin: 5px 0px;
+  color: rgb(42, 37, 37);
+  background-color: rgb(217, 228, 228);
+}
+
+button:hover{
+  background-color: #ff1313;
+}
+
+.button-list{
+  width: 5%;
+  margin-left: 30%;
+  text-align: center;
+  display: inline-table;
+}
+
+.company-logo{
+  width: 55%;
+  margin: 8% 8% 8% 20%;
+}
+
+.mat-column-btn{
+  width: 20%;
+}
+
+.sidebtn{
+  margin-left: 20px;
+  text-align: center;
+  width: 10px
+}
+
+.sidebtn.delete{
+  background-color: rgb(231, 92, 92);
+}
+
+.sidebtn.edit{
+  background-color: rgb(94, 193, 75);
+}
+
+table {
+  width: 85%;
+  margin: 0% 0% 0% 8%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.topbtns{
+  margin: 5% 0% 1% 10%;
+  font-family: Helvetica;
+}
+
+.topbtn{
+  margin: 0% 1.5% 0% 0%;
+  height: 35px;
+  background-color: rgb(173, 6, 6);
+  color: white;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+mat-sidenav{
+  width: 18%;
+  border-style: none;
+  background: linear-gradient(-45deg, #c63737, #4c0808, #e74b4b, #5a0f04);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
