@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
-import { TicketElement } from 'src/app/models/ticket.model';
+import { Component, OnInit } from '@angular/core';
+import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
-import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
-import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
-import { EditComponent } from 'src/app/edit/edit.component';
+import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
 
-const ELEMENT_DATA: TicketElement[] = [
+const ELEMENT_DATA: SalesTicketElement[] = [
   {
     id: 101,
     assignee: 'Maria Uy',
@@ -60,11 +58,11 @@ const ELEMENT_DATA: TicketElement[] = [
 ];
 
 @Component({
-  selector: 'app-ticket-management',
-  templateUrl: './ticket-management.component.html',
-  styleUrls: ['./ticket-management.component.css'],
+  selector: 'app-sales-dashboard',
+  templateUrl: './sales-dashboard.component.html',
+  styleUrls: ['./sales-dashboard.component.css'],
 })
-export class TicketManagementComponent {
+export class SalesDashboardComponent {
   displayedColumns: string[] = [
     'id',
     'assignee',
@@ -82,25 +80,5 @@ export class TicketManagementComponent {
     this.addDialog.open(AddTicketFormComponent);
   }
 
-  //openDialog(): void {
-    //this.dialog.open<string>(TicketDialogComponent);
-    //console.log('delete working');
-  //}
-
-  removeRow(id: number) {
-    this.dataSource = this.dataSource.filter((u) => u.id !== id);
-  }
-
-  editRow(id: number) {
-    this.dataSource = this.dataSource.filter((u) => {
-      if(u.id == id){
-      }
-      return true;
-    });
-  }
-
-  openEditDialog(): void {
-    this.dialog.open<string>(EditComponent);
-    console.log('edit working');
-  }
+  ngOnInit(): void {}
 }

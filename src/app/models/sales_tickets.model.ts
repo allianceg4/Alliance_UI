@@ -1,4 +1,4 @@
-export interface TicketElement {
+export interface SalesTicketElement {
   assignee: string;
   id: number;
   status: string;

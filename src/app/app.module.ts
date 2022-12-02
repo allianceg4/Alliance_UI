@@ -21,6 +21,7 @@ import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
 import { EditComponent } from './edit/edit.component';
+import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -38,7 +39,8 @@ const materialModules = [
     AppComponent,
     DashboardComponent,
     AddTicketFormComponent,
-    EditComponent,   
+    EditComponent,
+    SalesDashboardComponent,   
   ],
 
   imports: [

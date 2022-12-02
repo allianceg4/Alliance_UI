@@ -4,6 +4,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('../pages/sales-dashboard/sales.module').then(m => m.SalesModule)
+  },
+  {
+    path: '',
     loadChildren: () => import('../pages/login-page/log-in.module').then(m => m.LogInModule)
   },
   {
