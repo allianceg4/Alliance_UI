@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <mat-tab-group>
-  <mat-tab label="New Tickets">
+  <mat-tab label="Customer Issues">
     <table mat-table [dataSource]="dataSource" class="mat-elevation">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>Ticket ID</th>
@@ -53,7 +53,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
   </mat-tab>
-  <mat-tab label="Pending Tickets">
+  <mat-tab label="Transactions">
     <table mat-table [dataSource]="dataSource" class="mat-elevation">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>Ticket ID</th>
