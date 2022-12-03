@@ -82,11 +82,6 @@ export class TicketManagementComponent {
     this.addDialog.open(AddTicketFormComponent);
   }
 
-  //openDialog(): void {
-    //this.dialog.open<string>(TicketDialogComponent);
-    //console.log('delete working');
-  //}
-
   removeRow(id: number) {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
   }

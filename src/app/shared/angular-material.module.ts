@@ -9,6 +9,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 
@@ -24,7 +25,8 @@ import { MatInputModule } from '@angular/material/input';
     MatTableModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule
 
   ],
   exports: [
@@ -33,7 +35,8 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatMenuModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule
   ]
 })
 export class AngularMaterialModule { }

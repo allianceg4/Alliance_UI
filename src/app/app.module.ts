@@ -17,7 +17,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
