@@ -3,6 +3,7 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
+import { ConformSlipComponent } from '../../../shared/conform-slip/conform-slip.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -12,8 +13,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     subject: 'Recruit Report',
     description: 'Report for Recruit',
     tracker: 'AUD6',
-    btn1: 'edit',
-    btn2: 'delete',
   },
   {
     id: 201,
@@ -22,8 +21,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     subject: 'Sales Report',
     description: 'Report for Sales',
     tracker: '8WSA',
-    btn1: 'edit',
-    btn2: 'delete',
   },
   {
     id: 301,
@@ -32,8 +29,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     subject: 'HR Report',
     description: 'Report for HR',
     tracker: 'NX5A',
-    btn1: 'edit',
-    btn2: 'delete',
   },
   {
     id: 401,
@@ -42,8 +37,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     subject: 'Finance Report',
     description: 'Report for Finance',
     tracker: '0Z4S',
-    btn1: 'edit',
-    btn2: 'delete',
   },
   {
     id: 501,
@@ -52,8 +45,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     subject: 'Storage Report',
     description: 'Report for Storage',
     tracker: 'MA43',
-    btn1: 'edit',
-    btn2: 'delete',
   },
 ];
 
@@ -76,8 +67,8 @@ export class SalesDashboardComponent {
 
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
-  onAddTicket() {
-    this.addDialog.open(AddTicketFormComponent);
+  onCreateConformSlip() {
+    this.addDialog.open(ConformSlipComponent);
   }
 
   ngOnInit(): void {}
