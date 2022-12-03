@@ -3,7 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'client-side',
+    loadChildren: () => import('../pages/client-side/dashboard/dashboard.module').then(m => m.DashboardModule)
+  },
+  {
+    path: 'sales',
     loadChildren: () => import('../pages/sales-dashboard/sales.module').then(m => m.SalesModule)
   },
   {
