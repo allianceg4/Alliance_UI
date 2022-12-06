@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('../pages/billing-dashboard/billing.module').then(m => m.BillingModule)
   },
   {
+    path: 'collection',
+    loadChildren: () => import('../pages/collection-dashboard/collection.module').then(m => m.CollectionModule)
+  },
+  {
     path: 'sales',
     loadChildren: () => import('../pages/sales-dashboard/sales.module').then(m => m.SalesModule)
   },
