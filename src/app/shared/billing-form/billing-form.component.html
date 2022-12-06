@@ -5,19 +5,17 @@
     <div class="fields">
       <section>
         <dl>
-          <dt>Assignee:</dt>
-          <dd>Maria Uy</dd>
+          <dt>Name:</dt>
+          <dd>Zackery Peterson</dd>
           <div class="description">
             <dt>Description:</dt>
             <dd class="text">Report for Recruit</dd>
           </div>
         </dl>
       </section>
-      <mat-form-field appearance="fill">
-        <mat-label>File</mat-label>
-        <input matInput placeholder="Attach File Here" />
-        <mat-icon matSuffix>payment</mat-icon>
-      </mat-form-field>
+      <dt>Upload invoice here:</dt>
+      <input type="file" class="file-upload" onchange="console.log(event.target.files)">  
+      <br>
       <button class="subbtn" mat-flat-button>Send</button>
     </div>
   </div>

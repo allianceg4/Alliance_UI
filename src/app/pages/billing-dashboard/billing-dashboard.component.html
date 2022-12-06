@@ -43,9 +43,7 @@
           >
             <mat-icon>note_add</mat-icon>
           </button>
-          <button class="sidebtn delete" mat-flat-button color="primary">
-            <mat-icon>delete</mat-icon>
-          </button>
+          <button class="sidebtn delete" mat-flat-button color="primary" (click)="removeRow(element.id)"><mat-icon>{{element.btn2}}</mat-icon></button>
         </td>
       </ng-container>
 

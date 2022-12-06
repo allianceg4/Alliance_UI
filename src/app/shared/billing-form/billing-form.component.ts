@@ -18,7 +18,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   styleUrls: ['./billing-form.component.css']
 })
 export class BillingFormComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

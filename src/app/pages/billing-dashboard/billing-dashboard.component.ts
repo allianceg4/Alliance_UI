@@ -75,4 +75,8 @@ export class BillingDashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeRow(id: number) {
+    this.dataSource = this.dataSource.filter((u) => u.id !== id);
+  }
+
 }
