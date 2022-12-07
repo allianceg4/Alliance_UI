@@ -5,6 +5,7 @@ import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-tick
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 import { EditComponent } from 'src/app/edit/edit.component';
+import { Router } from '@angular/router';
 
 const ELEMENT_DATA: TicketElement[] = [
   {
@@ -76,16 +77,24 @@ export class TicketManagementComponent {
   ];
   dataSource = ELEMENT_DATA;
 
-  constructor(private addDialog: MatDialog, public dialog: Dialog) {}
+  constructor(
+    private addDialog: MatDialog,
+    public dialog: Dialog,
+    private router: Router
+  ) {}
 
   onAddTicket() {
     this.addDialog.open(AddTicketFormComponent);
   }
 
   //openDialog(): void {
-    //this.dialog.open<string>(TicketDialogComponent);
-    //console.log('delete working');
+  //this.dialog.open<string>(TicketDialogComponent);
+  //console.log('delete working');
   //}
+
+  toSales() {
+    this.router.navigateByUrl('sales');
+  }
 
   removeRow(id: number) {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
@@ -93,7 +102,7 @@ export class TicketManagementComponent {
 
   editRow(id: number) {
     this.dataSource = this.dataSource.filter((u) => {
-      if(u.id == id){
+      if (u.id == id) {
       }
       return true;
     });
