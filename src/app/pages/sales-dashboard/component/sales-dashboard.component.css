@@ -36,3 +36,14 @@ th.mat-sort-header-sorted {
   background-color: rgb(173, 6, 6);
   color: white;
 }
+
+table {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-paginator-container {
+  margin-left: auto;
+  margin-right: 200;
+}

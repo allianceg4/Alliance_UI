@@ -16,7 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
@@ -39,6 +39,7 @@ const materialModules = [
   MatTabsModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatPaginatorModule,
 ];
 
 @NgModule({

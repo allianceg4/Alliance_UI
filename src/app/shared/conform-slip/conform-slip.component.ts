@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
+import { ConformElement } from 'src/app/models/conform.model';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -17,8 +19,11 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   templateUrl: './conform-slip.component.html',
   styleUrls: ['./conform-slip.component.css'],
 })
-export class ConformSlipComponent implements OnInit {
-  constructor() {}
+export class ConformSlipComponent {
+  constructor(
+    public dialogRef: MatDialogRef<ConformSlipComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: ConformElement
+  ) {}
 
   ngOnInit(): void {}
 }
