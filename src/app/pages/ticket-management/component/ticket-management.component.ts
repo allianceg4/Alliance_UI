@@ -5,6 +5,7 @@ import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-tick
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 import { EditComponent } from 'src/app/edit/edit.component';
+import { Router } from '@angular/router';
 
 const ELEMENT_DATA: TicketElement[] = [
   {
@@ -76,7 +77,7 @@ export class TicketManagementComponent {
   ];
   dataSource = ELEMENT_DATA;
 
-  constructor(private addDialog: MatDialog, public dialog: Dialog) {}
+  constructor(private addDialog: MatDialog, public dialog: Dialog, public router:Router) {}
 
   onAddTicket() {
     this.addDialog.open(AddTicketFormComponent);
@@ -97,5 +98,9 @@ export class TicketManagementComponent {
   openEditDialog(): void {
     this.dialog.open<string>(EditComponent);
     console.log('edit working');
+  }
+
+  tempbtn(){
+    this.router.navigate(['billing']);
   }
 }

@@ -24,6 +24,8 @@ import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form
 import { EditComponent } from './edit/edit.component';
 import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
 import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
+import { BillingDashboardComponent } from './pages/billing-dashboard/billing-dashboard.component';
+import { BillingFormComponent } from './shared/billing-form/billing-form.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -46,6 +48,8 @@ const materialModules = [
     EditComponent,
     SalesDashboardComponent,
     ConformSlipComponent,
+    BillingDashboardComponent,
+    BillingFormComponent,
   ],
 
   imports: [
