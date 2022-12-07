@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
 import { ConformSlipComponent } from '../../../shared/conform-slip/conform-slip.component';
+import { TransactionModalComponent } from '../../../shared/transaction-modal/transaction-modal.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -140,6 +141,22 @@ export class SalesDashboardComponent {
 
   onCreateConformSlip() {
     this.addDialog.open(ConformSlipComponent, {
+      data: {
+        assignee: this.selectedRow.assignee,
+        subject: this.selectedRow.subject,
+        description: this.selectedRow.description,
+        id: this.selectedRow.id,
+      },
+    });
+
+    this.addDialog.afterAllClosed.subscribe((result) => {
+      console.log('closed');
+      this.selectedRow = null;
+    });
+  }
+
+  onClosingTransaction() {
+    this.addDialog.open(TransactionModalComponent, {
       data: {
         assignee: this.selectedRow.assignee,
         subject: this.selectedRow.subject,

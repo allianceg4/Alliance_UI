@@ -71,6 +71,9 @@
       </mat-paginator>
     </div>
   </mat-tab>
+
+  //Transactions tab
+
   <mat-tab label="Transactions">
     <table mat-table [dataSource]="dataSource" class="mat-elevation">
       <ng-container matColumnDef="id">
@@ -114,13 +117,27 @@
           >
             <mat-icon>note_add</mat-icon>
           </button>
-          <button class="sidebtn delete" mat-flat-button color="primary">
+          <button
+            (click)="removeRow(element.id)"
+            class="sidebtn delete"
+            mat-flat-button
+            color="primary"
+          >
             <mat-icon>delete</mat-icon>
           </button>
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"
+        [class.row-is-clicked]="clickedRows.has(row)"
+        (click)="extractData(row)"
+      ></tr>
     </table>
+    <div>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+      </mat-paginator>
+    </div>
   </mat-tab>
 </mat-tab-group>

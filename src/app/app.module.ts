@@ -26,6 +26,7 @@ import { EditComponent } from './edit/edit.component';
 import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
 import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
 import { FileIssueComponent } from './pages/client-side/file-issue/file-issue.component';
+import { TransactionModalComponent } from './shared/transaction-modal/transaction-modal.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -50,6 +51,7 @@ const materialModules = [
     SalesDashboardComponent,
     ConformSlipComponent,
     FileIssueComponent,
+    TransactionModalComponent,
   ],
 
   imports: [
