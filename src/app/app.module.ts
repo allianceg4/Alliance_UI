@@ -27,6 +27,10 @@ import { ConformSlipComponent } from './shared/conform-slip/conform-slip.compone
 import { BillingDashboardComponent } from './pages/billing-dashboard/billing-dashboard.component';
 import { BillingFormComponent } from './shared/billing-form/billing-form.component';
 
+import { CollectionDashboardComponent } from './pages/collection-dashboard/collection-dashboard.component';
+import { ApproveComponent } from './approve/approve.component';
+
+
 const materialModules = [
   MatExpansionModule,
   MatIconModule,
@@ -50,6 +54,8 @@ const materialModules = [
     ConformSlipComponent,
     BillingDashboardComponent,
     BillingFormComponent,
+    CollectionDashboardComponent,
+    ApproveComponent,
   ],
 
   imports: [
