@@ -3,6 +3,7 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-slip.component';
+import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -70,6 +71,10 @@ export class DashboardComponent implements OnInit {
 
   onCreateConformSlip() {
     this.addDialog.open(ConformSlipComponent);
+  }
+
+  onUpload() {
+    this.addDialog.open(UploadFormComponent);
   }
 
   ngOnInit(): void {
