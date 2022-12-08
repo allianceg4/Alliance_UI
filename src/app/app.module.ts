@@ -28,6 +28,7 @@ import { BillingFormComponent } from './shared/billing-form/billing-form.compone
 import { CollectionDashboardComponent } from './pages/collection-dashboard/collection-dashboard.component';
 import { ApproveComponent } from './approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const materialModules = [
@@ -65,6 +66,8 @@ const materialModules = [
     BrowserAnimationsModule,
     AngularMaterialModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
     materialModules,
   ],
   providers: [],

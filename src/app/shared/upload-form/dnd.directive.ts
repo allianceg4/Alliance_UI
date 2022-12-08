@@ -1,42 +1,36 @@
-import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+// import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@angular/core';
 
-export interface FileHandle {
-  file: File,
-  url: SafeUrl
-};
+// @Directive({
+//   selector: '[DropZone]'
+// })
+// export class DropzoneDirective {
+//   @Output() onFileDropped = new EventEmitter<any>();
 
-@Directive({
-  selector: '[appDrag]'
-})
-export class DragDirective {
+//   @HostBinding('style.opacity') private opacity = '1';
+//   @HostBinding('style.border') private border = 'none';
 
-  @Output() files: EventEmitter<FileHandle[]> = new EventEmitter();
+//   @HostListener('dragover', ['$event']) public onDragOver(evt: Event | DragEvent): any {
+//     evt.preventDefault();
+//     evt.stopPropagation();
+//     this.opacity = '0.8';
+//     this.border = 'dotted 2px #FF4D2A';
+//   }
 
-  @HostBinding("style.background") private background = "#eee";
+//   @HostListener('dragleave', ['$event']) public onDragLeave(evt: Event | DragEvent): any {
+//     evt.preventDefault();
+//     evt.stopPropagation();
+//     this.opacity = '1';
+//     this.border = 'none';
+//   }
 
-  constructor(private sanitizer: DomSanitizer) { }
-
-  @HostListener("dragover", ["$event"]) public onDragOver(evt: DragEvent) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    this.background = "#999";
-  }
-
-  @HostListener("dragleave", ["$event"]) public onDragLeave(evt: DragEvent) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    this.background = "#eee";
-  }
-
-  @HostListener('drop', ['$event']) public onDropStart(evt: DragEvent) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    this.background = '#eee';
-
-    let files: FileHandle[] = [];
-    if (files.length > 0) {
-      this.files.emit(files);
-    }
-  }
-}
+//   @HostListener('drop', ['$event']) public ondrop(evt: Event | DragEvent): any {
+//     evt.preventDefault();
+//     evt.stopPropagation();
+//     this.opacity = '1';
+//     this.border = 'none';
+//     const files = evt.dataTransfer.files;
+//     if (files.length > 0) {
+//       this.onFileDropped.emit(files);
+//     }
+//   }
+// }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
+import { SuccessfulDialogComponent } from '../successful-dialog/successful-dialog.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -18,7 +20,12 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   styleUrls: ['./conform-slip.component.css'],
 })
 export class ConformSlipComponent implements OnInit {
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
+
+  sendDialog() {
+    this.dialog.open(SuccessfulDialogComponent);
+    console.log("open");
+  }
 
   ngOnInit(): void {}
 }
