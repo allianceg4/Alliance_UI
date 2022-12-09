@@ -28,7 +28,7 @@
 
       <ng-container matColumnDef="subject">
         <th mat-header-cell *matHeaderCellDef>Subject</th>
-        <td mat-cell *matCellDef="let element">{{ element.subject }}</td>
+        <td mat-cell *matCellDef="let element"><a class="tab-btn subject" mat-flat-button color="primary">Click to View</a></td>
       </ng-container>
 
       <ng-container matColumnDef="datefile">
@@ -43,7 +43,7 @@
 
       <ng-container matColumnDef="description">
         <th mat-header-cell *matHeaderCellDef>Description</th>
-        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+        <td mat-cell *matCellDef="let element"><a class="tab-btn subject" mat-flat-button color="primary">Click to View</a></td>
       </ng-container>
 
       <ng-container matColumnDef="servicecharge">
@@ -52,13 +52,18 @@
       </ng-container>
 
       <ng-container matColumnDef="btn">
-        <th mat-header-cell *matHeaderCellDef></th>
+        <th mat-header-cell *matHeaderCellDef>
+          <a class="mat-header">Submit</a>
+          <a class="mat-header">Resolve</a>
+          <a class="mat-header">Cancel</a>
+        </th>
         <td mat-cell *matCellDef="let element" class="issue-btns">
           <button class="sidebtn submit" mat-flat-button color="primary" (click)="onUpload()"><mat-icon>save_alt</mat-icon></button>
           <button class="sidebtn resolve" mat-flat-button color="primary"><mat-icon>build</mat-icon></button>
           <button class="sidebtn remove" mat-flat-button color="primary"><mat-icon>delete</mat-icon></button>
         </td>
       </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>

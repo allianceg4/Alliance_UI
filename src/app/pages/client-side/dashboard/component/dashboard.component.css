@@ -82,6 +82,10 @@ h2{
   width: 20%;
 }
 
+.mat-header{
+  margin-left: 14%;
+}
+
 .profile{
   display: inline-table;
   margin: 10% 25% 0% 25%;
@@ -121,6 +125,12 @@ h2{
 table {
   width: 85%;
   margin: 0% 0% 0% 8%;
+}
+
+.tab-btn{
+  background-color: none;
+  background: none;
+  color: #352d2d;
 }
 
 /* td {
