@@ -24,11 +24,11 @@ import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
 import { EditComponent } from './edit/edit.component';
 import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
-import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
+<<<<<<<<< Temporary merge branch 1
 import { FileIssueComponent } from './pages/client-side/file-issue/file-issue.component';
-import { TransactionModalComponent } from './shared/transaction-modal/transaction-modal.component';
-import { CustomerIssuesComponent } from './pages/customer-issues/customer-issues.component';
-import { TransactionFormComponent } from './pages/transaction-form/transaction-form.component';
+=========
+import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
+>>>>>>>>> Temporary merge branch 2
 
 const materialModules = [
   MatExpansionModule,
@@ -52,10 +52,7 @@ const materialModules = [
     EditComponent,
     SalesDashboardComponent,
     ConformSlipComponent,
-    FileIssueComponent,
-    TransactionModalComponent,
-    CustomerIssuesComponent,
-    TransactionFormComponent,
+>>>>>>>>> Temporary merge branch 2
   ],
 
   imports: [
@@ -65,6 +62,8 @@ const materialModules = [
     BrowserAnimationsModule,
     AngularMaterialModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
     materialModules,
   ],
   providers: [],

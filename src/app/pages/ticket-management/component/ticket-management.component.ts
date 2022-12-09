@@ -3,7 +3,6 @@ import { TicketElement } from 'src/app/models/ticket.model';
 import { MatDialog } from '@angular/material/dialog';
 import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
-import { TicketDialogComponent } from '../ticket-dialog/ticket-dialog.component';
 import { EditComponent } from 'src/app/edit/edit.component';
 import { Router } from '@angular/router';
 
@@ -80,7 +79,7 @@ export class TicketManagementComponent {
   constructor(
     private addDialog: MatDialog,
     public dialog: Dialog,
-    private router: Router
+    public router: Router
   ) {}
 
   onAddTicket() {

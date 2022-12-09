@@ -15,17 +15,19 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 ];
 
 @Component({
-  selector: 'app-conform-slip',
-  templateUrl: './conform-slip.component.html',
-  styleUrls: ['./conform-slip.component.css'],
+  selector: 'app-billing-form',
+  templateUrl: './billing-form.component.html',
+  styleUrls: ['./billing-form.component.css']
 })
-export class ConformSlipComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+export class BillingFormComponent implements OnInit {
+  constructor(public dialog: MatDialog) { }
 
   sendDialog() {
     this.dialog.open(SuccessfulDialogComponent);
-    console.log('open');
+    console.log("open");
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }

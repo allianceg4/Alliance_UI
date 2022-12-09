@@ -18,6 +18,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { UploadFormComponent } from './upload-form/upload-form.component';
+import { SuccessfulDialogComponent } from './successful-dialog/successful-dialog.component';
 
 
 const materialModules = [
@@ -39,7 +41,8 @@ const materialModules = [
 ];
 
 const sharedComponents = [
-  NavbarComponent
+  NavbarComponent,
+  SuccessfulDialogComponent
 ];
 
 @NgModule({
@@ -55,7 +58,7 @@ const sharedComponents = [
     ...sharedComponents, ...materialModules,
   ],
   providers: [
-    NavbarComponent
+    NavbarComponent,
   ],
 
 })

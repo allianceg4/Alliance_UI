@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
-import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-slip.component';
-import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
+import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
+import { ApproveComponent } from 'src/app/approve/approve.component';
+
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -47,14 +48,12 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     tracker: 'MA43',
   },
 ];
-
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-collection-dashboard',
+  templateUrl: './collection-dashboard.component.html',
+  styleUrls: ['./collection-dashboard.component.css']
 })
-
-export class DashboardComponent implements OnInit {
+export class CollectionDashboardComponent implements OnInit {
 
   displayedColumns: string[] = [
     'id',
@@ -70,14 +69,19 @@ export class DashboardComponent implements OnInit {
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
   onCreateConformSlip() {
-    this.addDialog.open(ConformSlipComponent);
-  }
-
-  onUpload() {
-    this.addDialog.open(UploadFormComponent);
+    this.addDialog.open(BillingFormComponent);
   }
 
   ngOnInit(): void {
+  }
+
+  removeRow(id: number) {
+    this.dataSource = this.dataSource.filter((u) => u.id !== id);
+  }
+
+  openApprovedDialog(): void {
+    this.dialog.open<string>(ApproveComponent);
+    console.log('Approved');
   }
 
 }

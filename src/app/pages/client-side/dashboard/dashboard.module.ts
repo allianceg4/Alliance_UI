@@ -24,6 +24,9 @@ const routes = [
     FormsModule,
     RouterModule.forChild(routes),
     SharedModule
+  ],
+  providers:[
+    DashboardComponent,
   ]
 })
 export class DashboardModule { }

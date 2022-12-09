@@ -1,0 +1,32 @@
+<mat-card>
+	<p mat-card-title>Upload File Transaction</p>
+
+	<mat-divider></mat-divider>
+
+	<mat-card-content>
+		<br><br>
+		<mat-form-field style="width: 100%;">
+			<mat-label>Browse Files</mat-label>
+			<button mat-icon-button matPrefix (click)="f_input.click()">
+        <mat-icon>attach_file</mat-icon>
+      </button>
+			<input type="text" readonly matInput [formControl]="display" />
+			<input
+        type="file"
+        multiple
+        hidden
+        #f_input
+        (change)="handleFileInputChange(f_input.files!)"
+      />
+		</mat-form-field>
+		<br><br>
+	</mat-card-content>
+
+		<mat-divider></mat-divider>
+
+		<mat-card-actions>
+			<button mat-stroked-button color="primary" [disabled]="display.invalid" (click)="sendDialog()">
+      Submit
+    </button>
+		</mat-card-actions>
+</mat-card>
