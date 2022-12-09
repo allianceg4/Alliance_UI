@@ -1,8 +1,13 @@
 .filler {
   flex: 1 1 auto;
 }
+
 .gap {
   margin-right: 10px;
+}
+
+.gap.logout {
+  cursor: pointer;
 }
 
 .filler, .gap {

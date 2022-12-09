@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-slip.component';
 import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
+import { ModalDescriptionComponent } from '../../modal-description/modal-description.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -75,6 +76,10 @@ export class DashboardComponent implements OnInit {
 
   onUpload() {
     this.addDialog.open(UploadFormComponent);
+  }
+
+  showDescription() {
+    this.addDialog.open(ModalDescriptionComponent);
   }
 
   ngOnInit(): void {
