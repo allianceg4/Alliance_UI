@@ -20,7 +20,7 @@ const routes = [
     AngularMaterialModule,
     FlexLayoutModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
   ],
 })
-export class SalesModule { }
+export class SalesModule {}
