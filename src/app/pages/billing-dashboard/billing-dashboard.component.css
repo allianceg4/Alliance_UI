@@ -27,7 +27,7 @@ mat-icon{
 }
 
 button{
-  margin: 0px 0px;
+  margin: 5px 0px;
   color: rgb(42, 37, 37);
   background-color: rgb(217, 228, 228);
 }
@@ -37,7 +37,7 @@ button:hover{
 }
 
 .nav-btns{
-  width: 10%;
+  width: 5%;
   margin-left: 20%;
   text-align:left;
   display: inline-table;
@@ -75,7 +75,8 @@ h2{
 }
 
 .issue-btns{
-  display: flex;
+  padding-top: 2.5%;
+  display: inline-flex;
 }
 
 .mat-column-btn{
@@ -92,7 +93,7 @@ h2{
 
 .profile-headings{
   display: grid;
-  margin: 10% 0% 0% 15%;
+  margin: 10% 0% 0% 4%;
   width: 100%;
   text-align: center;
 }
@@ -100,22 +101,31 @@ h2{
 .profile-logo{
   width: 85px;
   border-radius: 50%;
-  margin-left: 19%
+  margin-left: 20%
 }
 
 .sidebtn{
   margin-left: 20px;
   text-align: center;
+  width: 10px;
   padding: 2px;
   color: white;
+  font-size: smaller;
 }
 
 .sidebtn.remove{
+  font-size: smaller;
   background-color: rgb(231, 92, 92);
 }
 
-.sidebtn.submit, .sidebtn.resolve{
+.sidebtn.download{
+  font-size: smaller;
   background-color: rgb(99, 146, 177);
+}
+
+.sidebtn.submit, .sidebtn.resolve{
+  background-color: rgb(70, 195, 70);
+  font-size: smaller;
 }
 
 table {
@@ -140,14 +150,7 @@ th.mat-sort-header-sorted {
   margin: 0% 1.5% 0% 0%;
   height: 35px;
   background-color: rgb(173, 6, 6);
-  color: white;
+  color: white
 }
 
-header {
-  text-align: center;
-}
-
-service{
-  text-align: center;
-}
 

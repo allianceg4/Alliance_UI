@@ -1,8 +1,17 @@
-:host {
-    display: block;
-    background: #fff;
-    border-radius: 8px;
-    padding: 16px;
-    max-width: 500px;
+
+::ng-deep#mat-dialog-1{
+  width: 50%;
+  margin-left: 25%;
+  text-align: -moz-center;
   }
+  
+  .success-img{
+      width: 15%;
+  }
+  
+  .successful-dialog{
+      padding: 2px;
+      text-align: center;
+  }
+  
   
