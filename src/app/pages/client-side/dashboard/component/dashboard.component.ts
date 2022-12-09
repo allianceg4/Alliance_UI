@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-slip.component';
 import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
+import { HttpClient } from '@angular/common/http';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -67,7 +68,7 @@ export class DashboardComponent implements OnInit {
   ];
   dataSource = ELEMENT_DATA;
 
-  constructor(private addDialog: MatDialog, public dialog: Dialog) {}
+  constructor(private addDialog: MatDialog, public dialog: Dialog, private http:HttpClient) {}
 
   onCreateConformSlip() {
     this.addDialog.open(ConformSlipComponent);
@@ -78,6 +79,9 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.http.get('http://localhost:8080/tickets').subscribe( result => {
+      console.log(result);
+    })
   }
 
 }

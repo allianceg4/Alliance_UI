@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -29,6 +30,7 @@ import { CollectionDashboardComponent } from './pages/collection-dashboard/colle
 import { ApproveComponent } from './approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 const materialModules = [
@@ -68,6 +70,7 @@ const materialModules = [
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     materialModules,
   ],
   providers: [],
