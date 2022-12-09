@@ -1,18 +1,8 @@
 export interface SalesTicketElement {
-  assignee: string;
+  datefile: string;
   id: number;
   status: string;
   subject: string;
   description: string;
-  tracker: string;
+  servicecharge: number;
 }
-
-export interface BillingTicketElement {
-  id: number;
-  status: string;
-  subject: string;
-  description: string;
-  date: number;
-  serviceCharge: number;
-}
-

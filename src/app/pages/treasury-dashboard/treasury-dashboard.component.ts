@@ -3,6 +3,8 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
+import { ApproveComponent } from 'src/app/approve/approve.component';
+import { EditComponent } from 'src/app/edit/edit.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -47,13 +49,12 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   },
 ];
 
-
 @Component({
-  selector: 'app-billing-dashboard',
-  templateUrl: './billing-dashboard.component.html',
-  styleUrls: ['./billing-dashboard.component.css']
+  selector: 'app-treasury-dashboard',
+  templateUrl: './treasury-dashboard.component.html',
+  styleUrls: ['./treasury-dashboard.component.css']
 })
-export class BillingDashboardComponent implements OnInit {
+export class TreasuryDashboardComponent implements OnInit {
 
   displayedColumns: string[] = [
     'id',
@@ -66,15 +67,9 @@ export class BillingDashboardComponent implements OnInit {
   ];
   dataSource = ELEMENT_DATA;
 
-
-
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
   onCreateConformSlip() {
-    this.addDialog.open(BillingFormComponent);
-  }
-
-  onUpload() {
     this.addDialog.open(BillingFormComponent);
   }
 
@@ -85,4 +80,9 @@ export class BillingDashboardComponent implements OnInit {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
   }
 
+  onUpload() {
+    this.addDialog.open(ApproveComponent);
+  }
+
 }
+

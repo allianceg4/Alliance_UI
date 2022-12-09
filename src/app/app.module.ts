@@ -31,6 +31,7 @@ import { ApproveComponent } from './approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SubmitComponent } from './submit/submit.component';
+import { TreasuryDashboardComponent } from './pages/treasury-dashboard/treasury-dashboard.component';
 
 
 const materialModules = [
@@ -59,7 +60,8 @@ const materialModules = [
     CollectionDashboardComponent,
     ApproveComponent,
     UploadFormComponent,
-    SubmitComponent
+    SubmitComponent,
+    TreasuryDashboardComponent
   ],
 
   imports: [

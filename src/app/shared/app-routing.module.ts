@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('../pages/client-side/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
+    path: 'treasury',
+    loadChildren: () => import('../pages/treasury-dashboard/treasury.module').then(m => m.TreasuryModule)
+  },
+  {
     path: 'billing',
     loadChildren: () => import('../pages/billing-dashboard/billing.module').then(m => m.BillingModule)
   },
