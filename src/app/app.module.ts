@@ -19,14 +19,14 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
-import { EditComponent } from './edit/edit.component';
+import { EditComponent } from './shared/edit/edit.component';
 import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
 import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
 import { BillingDashboardComponent } from './pages/billing-dashboard/billing-dashboard.component';
 import { BillingFormComponent } from './shared/billing-form/billing-form.component';
 
 import { CollectionDashboardComponent } from './pages/collection-dashboard/collection-dashboard.component';
-import { ApproveComponent } from './approve/approve.component';
+import { ApproveComponent } from './shared/approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalDescriptionComponent } from './pages/client-side/modal-description/modal-description.component';

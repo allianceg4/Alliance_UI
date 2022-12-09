@@ -3,7 +3,7 @@ import { TicketElement } from 'src/app/models/ticket.model';
 import { MatDialog } from '@angular/material/dialog';
 import { AddTicketFormComponent } from '../../../shared/add-ticket-form/add-ticket-form.component';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
-import { EditComponent } from 'src/app/edit/edit.component';
+import { EditComponent } from 'src/app/shared/edit/edit.component';
 import { Router } from '@angular/router';
 
 const ELEMENT_DATA: TicketElement[] = [
