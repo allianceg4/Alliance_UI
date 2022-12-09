@@ -1,39 +1,153 @@
-.mat-column-btn {
-    width: 20%;
-  }
-  
-  .sidebtn {
-    margin-left: 20px;
-    text-align: center;
-    width: 10px;
-  }
-  
-  .sidebtn.delete {
-    background-color: rgb(231, 92, 92);
-  }
-  
-  .sidebtn.edit {
-    background-color: rgb(94, 193, 75);
-  }
-  
-  table {
-    width: 85%;
-    margin: 0% 0% 0% 8%;
-  }
-  
-  th.mat-sort-header-sorted {
-    color: black;
-  }
-  
-  .topbtns {
-    margin: 5% 0% 1% 10%;
-    font-family: Helvetica;
-  }
-  
-  .topbtn {
-    margin: 0% 1.5% 0% 0%;
-    height: 35px;
-    background-color: rgb(173, 6, 6);
-    color: white;
-  }
-  
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+mat-sidenav{
+  width: 18%;
+  border-style: none;
+  background: linear-gradient(-45deg, #c63737, #4c0808, #e74b4b, #5a0f04);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+mat-tab-group{
+  margin: 5%;
+}
+
+mat-icon{
+  margin: 0% 5%;
+}
+
+button{
+  margin: 0px 0px;
+  color: rgb(42, 37, 37);
+  background-color: rgb(217, 228, 228);
+}
+
+button:hover{
+  background-color: #ff1313;
+}
+
+.nav-btns{
+  width: 10%;
+  margin-left: 20%;
+  text-align:left;
+  display: inline-table;
+  color: white;
+}
+
+.company-logo{
+  width: 55%;
+  margin: 8% 8% 8% 20%;
+}
+
+.dashboard-headings{
+  margin: 3% 0% 1% 8%;
+  color: white;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:#ca3131;
+	background-size: 400% 400%;
+}
+
+h2{
+  margin: 0%;
+}
+
+.file-issue{
+  position: absolute;
+  top: 17%;
+  right: 7%;
+}
+
+.issue-btns{
+  display: flex;
+}
+
+.mat-column-btn{
+  width: 20%;
+}
+
+.profile{
+  display: inline-table;
+  margin: 10% 25% 0% 25%;
+  margin-bottom: 10%;
+  color: white;
+  padding-top: 50%;
+}
+
+.profile-headings{
+  display: grid;
+  margin: 10% 0% 0% 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-logo{
+  width: 85px;
+  border-radius: 50%;
+  margin-left: 19%
+}
+
+.sidebtn{
+  margin-left: 20px;
+  text-align: center;
+  padding: 2px;
+  color: white;
+}
+
+.sidebtn.remove{
+  background-color: rgb(231, 92, 92);
+}
+
+.sidebtn.submit, .sidebtn.resolve{
+  background-color: rgb(99, 146, 177);
+}
+
+table {
+  width: 85%;
+  margin: 0% 0% 0% 8%;
+}
+
+/* td {
+  display: flex;
+} */
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.topbtns{
+  margin: 5% 0% 1% 10%;
+  font-family: Helvetica;
+}
+
+.topbtn{
+  margin: 0% 1.5% 0% 0%;
+  height: 35px;
+  background-color: rgb(173, 6, 6);
+  color: white;
+}
+
+header {
+  text-align: center;
+}
+
+service{
+  text-align: center;
+}
+

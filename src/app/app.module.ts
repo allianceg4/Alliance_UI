@@ -29,6 +29,7 @@ import { CollectionDashboardComponent } from './pages/collection-dashboard/colle
 import { ApproveComponent } from './approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SubmitComponent } from './submit/submit.component';
 
 
 const materialModules = [
@@ -56,7 +57,8 @@ const materialModules = [
     BillingFormComponent,
     CollectionDashboardComponent,
     ApproveComponent,
-    UploadFormComponent
+    UploadFormComponent,
+    SubmitComponent
   ],
 
   imports: [

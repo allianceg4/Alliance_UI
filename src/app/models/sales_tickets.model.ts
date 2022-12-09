@@ -6,3 +6,13 @@ export interface SalesTicketElement {
   description: string;
   tracker: string;
 }
+
+export interface BillingTicketElement {
+  id: number;
+  status: string;
+  subject: string;
+  description: string;
+  date: number;
+  serviceCharge: number;
+}
+
