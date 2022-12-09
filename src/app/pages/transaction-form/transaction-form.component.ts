@@ -5,6 +5,7 @@ import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { TransactionModalComponent } from '../../shared/transaction-modal/transaction-modal.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { TicketElement } from 'src/app/models/ticket.model';
 
 export interface DialogData {
   assignee: string;
@@ -12,89 +13,58 @@ export interface DialogData {
   description: string;
 }
 
-const ELEMENT_DATA: SalesTicketElement[] = [
+const ELEMENT_DATA: TicketElement[] = [
   {
     id: 101,
-    assignee: 'Maria Uy',
+    datefile: '02/11/22',
     status: 'Available',
     subject: 'Recruit Report',
     description: 'Report for Recruit',
-    tracker: 'AUD6',
+    servicecharge: 20.0,
+    btn1: 'edit',
+    btn2: 'delete',
   },
   {
     id: 201,
-    assignee: 'Jose Yep',
+    datefile: '05/23/22',
     status: 'Unavailable',
     subject: 'Sales Report',
     description: 'Report for Sales',
-    tracker: '8WSA',
+    servicecharge: 25.0,
+    btn1: 'edit',
+    btn2: 'delete',
   },
   {
     id: 301,
-    assignee: 'Miguel Tan',
+    datefile: '01/02/22',
     status: 'Available',
     subject: 'HR Report',
     description: 'Report for HR',
-    tracker: 'NX5A',
+    servicecharge: 25.0,
+    btn1: 'edit',
+    btn2: 'delete',
   },
   {
     id: 401,
-    assignee: 'Olivia Sue',
+    datefile: '12/23/22',
     status: 'Unavailable',
     subject: 'Finance Report',
     description: 'Report for Finance',
-    tracker: '0Z4S',
+    servicecharge: 20.0,
+    btn1: 'edit',
+    btn2: 'delete',
   },
   {
     id: 501,
-    assignee: 'Juan Cruz',
+    datefile: '11/07/22',
     status: 'Available',
     subject: 'Storage Report',
     description: 'Report for Storage',
-    tracker: 'MA43',
-  },
-  {
-    id: 601,
-    assignee: 'Maria Uy',
-    status: 'Available',
-    subject: 'Recruit Report',
-    description: 'Report for Recruit',
-    tracker: 'AUD6',
-  },
-  {
-    id: 701,
-    assignee: 'Jose Yep',
-    status: 'Unavailable',
-    subject: 'Sales Report',
-    description: 'Report for Sales',
-    tracker: '8WSA',
-  },
-  {
-    id: 801,
-    assignee: 'Miguel Tan',
-    status: 'Available',
-    subject: 'HR Report',
-    description: 'Report for HR',
-    tracker: 'NX5A',
-  },
-  {
-    id: 901,
-    assignee: 'Olivia Sue',
-    status: 'Unavailable',
-    subject: 'Finance Report',
-    description: 'Report for Finance',
-    tracker: '0Z4S',
-  },
-  {
-    id: 1001,
-    assignee: 'Jorj Bugwak',
-    status: 'Available',
-    subject: 'Storage Report',
-    description: 'Report for Storage',
-    tracker: 'MA43',
+    servicecharge: 25.0,
+    btn1: 'edit',
+    btn2: 'delete',
   },
 ];
-
 @Component({
   selector: 'app-transaction-form',
   templateUrl: './transaction-form.component.html',
@@ -103,7 +73,7 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 export class TransactionFormComponent implements OnInit {
   assignee;
   subject;
-  description;
+  date;
   id;
   selectedRow;
 
