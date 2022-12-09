@@ -6,11 +6,11 @@ import { SuccessfulDialogComponent } from '../successful-dialog/successful-dialo
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
     id: 101,
-    assignee: 'Maria Uy',
+    datefile: '11/11/22',
     status: 'Available',
     subject: 'Recruit Report',
     description: 'Report for Recruit',
-    tracker: 'AUD6',
+    servicecharge: 20.00,
   },
 ];
 
