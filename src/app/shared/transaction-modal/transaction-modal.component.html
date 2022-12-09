@@ -1,27 +1,34 @@
 <div class="slip">
-  <div>
-    <h1>Issue conforme slip for</h1>
+  <div class="left">
+    <div>
+      <h1>View transaction</h1>
+      <div class="fields">
+        <section>
+          <dl>
+            <dt>Issue ID:</dt>
+            <dd>{{ data.id }}</dd>
+            <dt>Date Issued:</dt>
+            <dd>{{ data.datefile }}</dd>
+            <dt>Subject:</dt>
+            <dd>{{ data.subject }}</dd>
+          </dl>
+        </section>
+        <button class="subbtn" mat-flat-button (click)="sendDialog()">
+          Close Transaction
+        </button>
+      </div>
+    </div>
   </div>
-  <div class="fields">
-    <section>
-      <dl>
-        <dt>Ticket ID:</dt>
-        <dd>{{ data.id }}</dd>
-        <dt>Assignee:</dt>
-        <dd>{{ data.assignee }}</dd>
-        <dt>Subject:</dt>
-        <dd>{{ data.subject }}</dd>
-        <div class="description">
-          <dt>Description:</dt>
-          <dd class="text">{{ data.description }}</dd>
-        </div>
-      </dl>
-    </section>
-    <mat-form-field appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input matInput placeholder="Amount" />
-      <mat-icon matSuffix>payment</mat-icon>
-    </mat-form-field>
-    <button class="subbtn" mat-flat-button>Close Transaction</button>
+
+  <div class="img">
+    <h3>Attached File</h3>
+    <a
+      mat-icon-button
+      href="{{ data.fileURI }}"
+      download="{{ data.fileURI }}"
+      title="download {{ data.fileURI }}"
+    >
+      <mat-icon inline>get_app</mat-icon>
+    </a>
   </div>
 </div>

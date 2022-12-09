@@ -7,12 +7,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { TicketElement } from 'src/app/models/ticket.model';
 
-export interface DialogData {
-  assignee: string;
-  subject: string;
-  description: string;
-}
-
 const ELEMENT_DATA: TicketElement[] = [
   {
     id: 101,
@@ -73,21 +67,21 @@ const ELEMENT_DATA: TicketElement[] = [
 })
 export class CustomerIssuesComponent {
   id;
-  date;
+  datefile;
   subject;
   selectedRow;
 
   displayedColumns: string[] = [
     'id',
-    'assignee',
+    'datefile',
     'status',
     'subject',
     'description',
-    'tracker',
+    'servicecharge',
     'btn',
   ];
   dataSource: MatTableDataSource<any> = new MatTableDataSource<any>([]);
-  clickedRows = new Set<SalesTicketElement>();
+  clickedRows = new Set<TicketElement>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -112,7 +106,7 @@ export class CustomerIssuesComponent {
       data: {
         id: this.selectedRow.id,
         subject: this.selectedRow.subject,
-        date: this.selectedRow.datefile,
+        datefile: this.selectedRow.datefile,
       },
     });
 

@@ -6,14 +6,9 @@ import { TransactionModalComponent } from '../../shared/transaction-modal/transa
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { TicketElement } from 'src/app/models/ticket.model';
+import { TransactionElement } from 'src/app/models/transactions.model';
 
-export interface DialogData {
-  assignee: string;
-  subject: string;
-  description: string;
-}
-
-const ELEMENT_DATA: TicketElement[] = [
+const ELEMENT_DATA: TransactionElement[] = [
   {
     id: 101,
     datefile: '02/11/22',
@@ -23,6 +18,7 @@ const ELEMENT_DATA: TicketElement[] = [
     servicecharge: 20.0,
     btn1: 'edit',
     btn2: 'delete',
+    fileURI: '../../../assets/block-section.pdf',
   },
   {
     id: 201,
@@ -33,6 +29,7 @@ const ELEMENT_DATA: TicketElement[] = [
     servicecharge: 25.0,
     btn1: 'edit',
     btn2: 'delete',
+    fileURI: '../../../assets/block-section.pdf',
   },
   {
     id: 301,
@@ -43,6 +40,7 @@ const ELEMENT_DATA: TicketElement[] = [
     servicecharge: 25.0,
     btn1: 'edit',
     btn2: 'delete',
+    fileURI: '../../../assets/block-section.pdf',
   },
   {
     id: 401,
@@ -53,6 +51,7 @@ const ELEMENT_DATA: TicketElement[] = [
     servicecharge: 20.0,
     btn1: 'edit',
     btn2: 'delete',
+    fileURI: '../../../assets/block-section.pdf',
   },
   {
     id: 501,
@@ -63,6 +62,7 @@ const ELEMENT_DATA: TicketElement[] = [
     servicecharge: 25.0,
     btn1: 'edit',
     btn2: 'delete',
+    fileURI: '../../../assets/block-section.pdf',
   },
 ];
 @Component({
@@ -71,23 +71,23 @@ const ELEMENT_DATA: TicketElement[] = [
   styleUrls: ['./transaction-form.component.css'],
 })
 export class TransactionFormComponent implements OnInit {
-  assignee;
   subject;
-  date;
+  datefile;
   id;
+  fileURI;
   selectedRow;
 
   displayedColumns: string[] = [
     'id',
-    'assignee',
+    'datefile',
     'status',
     'subject',
     'description',
-    'tracker',
+    'servicecharge',
     'btn',
   ];
   dataSource: MatTableDataSource<any> = new MatTableDataSource<any>([]);
-  clickedRows = new Set<SalesTicketElement>();
+  clickedRows = new Set<TicketElement>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -107,29 +107,13 @@ export class TransactionFormComponent implements OnInit {
     this.dataSource.data = this.dataSource.data.filter((u) => u.id !== id);
   }
 
-  // onCreateConformSlip() {
-  //   this.addDialog.open(ConformSlipComponent, {
-  //     data: {
-  //       assignee: this.selectedRow.assignee,
-  //       subject: this.selectedRow.subject,
-  //       description: this.selectedRow.description,
-  //       id: this.selectedRow.id,
-  //     },
-  //   });
-
-  //   this.addDialog.afterAllClosed.subscribe((result) => {
-  //     console.log('closed');
-  //     this.selectedRow = null;
-  //   });
-  // }
-
   onClosingTransaction() {
     this.addDialog.open(TransactionModalComponent, {
       data: {
-        assignee: this.selectedRow.assignee,
         subject: this.selectedRow.subject,
-        description: this.selectedRow.description,
+        datefile: this.selectedRow.datefile,
         id: this.selectedRow.id,
+        fileURI: this.selectedRow.fileURI,
       },
     });
 

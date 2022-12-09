@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { SuccessfulDialogComponent } from '../successful-dialog/successful-dialog.component';
-import { ConformElement } from 'src/app/models/conform.model';
+import { TicketElement } from 'src/app/models/ticket.model';
 
 @Component({
   selector: 'app-conform-slip',
@@ -14,7 +14,7 @@ export class ConformSlipComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     public dialogRef: MatDialogRef<ConformSlipComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: ConformElement
+    @Inject(MAT_DIALOG_DATA) public data: TicketElement
   ) {}
 
   sendDialog() {

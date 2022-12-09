@@ -13,7 +13,7 @@ const ELEMENT_DATA: TicketElement[] = [
     status: 'Available',
     subject: 'Recruit Report',
     description: 'Report for Recruit',
-    servicecharge: 20.00,
+    servicecharge: 20.0,
     btn1: 'edit',
     btn2: 'delete',
   },
@@ -23,7 +23,7 @@ const ELEMENT_DATA: TicketElement[] = [
     status: 'Unavailable',
     subject: 'Sales Report',
     description: 'Report for Sales',
-    servicecharge: 25.00,
+    servicecharge: 25.0,
     btn1: 'edit',
     btn2: 'delete',
   },
@@ -33,7 +33,7 @@ const ELEMENT_DATA: TicketElement[] = [
     status: 'Available',
     subject: 'HR Report',
     description: 'Report for HR',
-    servicecharge: 25.00,
+    servicecharge: 25.0,
     btn1: 'edit',
     btn2: 'delete',
   },
@@ -43,7 +43,7 @@ const ELEMENT_DATA: TicketElement[] = [
     status: 'Unavailable',
     subject: 'Finance Report',
     description: 'Report for Finance',
-    servicecharge: 20.00,
+    servicecharge: 20.0,
     btn1: 'edit',
     btn2: 'delete',
   },
@@ -53,7 +53,7 @@ const ELEMENT_DATA: TicketElement[] = [
     status: 'Available',
     subject: 'Storage Report',
     description: 'Report for Storage',
-    servicecharge: 25.00,
+    servicecharge: 25.0,
     btn1: 'edit',
     btn2: 'delete',
   },
@@ -86,15 +86,6 @@ export class TicketManagementComponent {
     this.addDialog.open(AddTicketFormComponent);
   }
 
-  //openDialog(): void {
-  //this.dialog.open<string>(TicketDialogComponent);
-  //console.log('delete working');
-  //}
-
-  toSales() {
-    this.router.navigateByUrl('sales');
-  }
-
   removeRow(id: number) {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
   }
@@ -110,5 +101,13 @@ export class TicketManagementComponent {
   openEditDialog(): void {
     this.dialog.open<string>(EditComponent);
     console.log('edit working');
+  }
+
+  tempbtn() {
+    this.router.navigate(['billing']);
+  }
+
+  tempbtnCollect() {
+    this.router.navigate(['collection']);
   }
 }

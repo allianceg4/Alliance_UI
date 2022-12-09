@@ -1,23 +1,23 @@
-.company-logo{
+.company-logo {
   width: 55%;
   margin: 8%;
 }
 
-.mat-column-btn{
+.mat-column-btn {
   width: 20%;
 }
 
-.sidebtn{
+.sidebtn {
   margin-left: 20px;
   text-align: center;
-  width: 10px
+  width: 10px;
 }
 
-.sidebtn.delete{
+.sidebtn.delete {
   background-color: rgb(231, 92, 92);
 }
 
-.sidebtn.edit{
+.sidebtn.edit {
   background-color: rgb(94, 193, 75);
 }
 
@@ -30,12 +30,12 @@ th.mat-sort-header-sorted {
   color: black;
 }
 
-.topbtns{
+.topbtns {
   margin: 5% 0% 1% 10%;
   font-family: Helvetica;
 }
 
-.topbtn{
+.topbtn {
   margin: 0% 1.5% 0% 0%;
   height: 35px;
   background-color: rgb(173, 6, 6);
@@ -51,8 +51,7 @@ th.mat-sort-header-sorted {
   background: #eee;
 }
 
-mat-sidenav{
+mat-sidenav {
   width: 18%;
   border-style: none;
 }
-

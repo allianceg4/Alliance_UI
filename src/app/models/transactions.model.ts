@@ -1,9 +1,11 @@
 export interface TransactionElement {
-  assignee: string;
+  datefile: string;
   id: number;
   status: string;
   subject: string;
   description: string;
-  tracker: string;
-  proof_of_payment?: File;
+  servicecharge: number;
+  btn1: string;
+  btn2: string;
+  fileURI: string;
 }

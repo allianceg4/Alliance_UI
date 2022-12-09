@@ -33,6 +33,7 @@ import { CollectionDashboardComponent } from './pages/collection-dashboard/colle
 import { ApproveComponent } from './approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LightboxModule } from 'ngx-lightbox';
 
 const materialModules = [
   MatExpansionModule,
@@ -68,6 +69,7 @@ const materialModules = [
   ],
 
   imports: [
+    LightboxModule,
     BrowserModule,
     RouterModule,
     AppRoutingModule,
