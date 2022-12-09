@@ -21,3 +21,7 @@ dd {
 .description {
   width: 350px;
 }
+.slip {
+  align-items: flex-start;
+  flex-direction: column;
+}

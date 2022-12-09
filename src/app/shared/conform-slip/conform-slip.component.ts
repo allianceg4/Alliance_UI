@@ -17,6 +17,7 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 @Component({
   selector: 'app-conform-slip',
   templateUrl: './conform-slip.component.html',
+  styleUrls: ['./conform-slip.component.css'],
 })
 export class ConformSlipComponent {
   constructor(

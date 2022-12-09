@@ -1,0 +1,27 @@
+.fields {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.subbtn {
+  height: 35px;
+  background-color: rgb(112, 122, 179);
+  color: white;
+}
+
+dt {
+  font-weight: 800;
+}
+dd {
+  word-wrap: break-word;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.description {
+  width: 350px;
+}
+.slip {
+  align-items: flex-start;
+  flex-direction: column;
+}

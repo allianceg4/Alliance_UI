@@ -27,6 +27,8 @@ import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales
 import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
 import { FileIssueComponent } from './pages/client-side/file-issue/file-issue.component';
 import { TransactionModalComponent } from './shared/transaction-modal/transaction-modal.component';
+import { CustomerIssuesComponent } from './pages/customer-issues/customer-issues.component';
+import { TransactionFormComponent } from './pages/transaction-form/transaction-form.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -52,6 +54,8 @@ const materialModules = [
     ConformSlipComponent,
     FileIssueComponent,
     TransactionModalComponent,
+    CustomerIssuesComponent,
+    TransactionFormComponent,
   ],
 
   imports: [
