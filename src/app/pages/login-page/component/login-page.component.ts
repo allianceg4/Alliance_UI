@@ -64,9 +64,20 @@ export class LoginPageComponent implements OnInit {
   }
 
   async login(email: string, password: string) : Promise<void> {
-    if(this.signinform.valid){
-            this.router.navigate(['/ticket-management']);
-        }
+    switch (email) {
+      case 'juandelacruz@gmail.com':
+        this.router.navigate(['/client-side']);
+          break;
+      case 'bethdimagiba@gmail.com':
+        this.router.navigate(['/treasury']);
+          break;
+      case 'bethdimagiba@gmail.com':
+        this.router.navigate(['/treasury']);
+          break;
+      default:
+        alert('Account doesnt exist!')
+        break;
+  }
   }
 
   // -------- FOR USER REGISTRATION

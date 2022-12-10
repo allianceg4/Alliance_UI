@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { UploadFormComponent } from './upload-form/upload-form.component';
 import { SuccessfulDialogComponent } from './successful-dialog/successful-dialog.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 const materialModules = [
@@ -44,7 +45,8 @@ const materialModules = [
 const sharedComponents = [
   NavbarComponent,
   SuccessfulDialogComponent,
-  FooterComponent
+  FooterComponent,
+  SidenavComponent
 ];
 
 @NgModule({

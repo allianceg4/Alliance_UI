@@ -10,6 +10,10 @@
   cursor: pointer;
 }
 
+.gap.home{
+  margin-bottom: 10px;
+}
+
 .filler, .gap {
   font-size: medium;
 }

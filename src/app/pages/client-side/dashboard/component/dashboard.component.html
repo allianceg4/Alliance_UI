@@ -1,15 +1,6 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" opened>
-    <img class="company-logo" src="https://asi-ees.com/pos_article/20171018/images/logo-asi.png">
-    <div class="profile">
-      <img class="profile-logo" src="https://png.pngitem.com/pimgs/s/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="Avatar">
-      <div class="profile-headings">
-        <a>Juan Dela Cruz</a>
-        <a>Official Client</a>
-      </div>
-    </div>
-    <div class="nav-btns">
-    </div>
+    <app-sidenav [displayName]="nametoDisplay" [displayRole]="roletoDisplay"></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
 <app-navbar></app-navbar>

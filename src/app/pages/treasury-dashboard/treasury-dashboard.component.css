@@ -44,11 +44,6 @@ button:hover{
   color: white;
 }
 
-.company-logo{
-  width: 55%;
-  margin: 8% 8% 8% 20%;
-}
-
 .dashboard-headings{
   margin: 3% 0% 1% 8%;
   color: white;
@@ -83,26 +78,10 @@ h2{
   width: 20%;
 }
 
-.profile{
-  display: inline-table;
-  margin: 10% 25% 0% 25%;
-  margin-bottom: 10%;
-  color: white;
+.mat-header{
+  margin-left: 11%;
+  margin-bottom: 10px;
 }
-
-.profile-headings{
-  display: grid;
-  margin: 10% 0% 0% 15%;
-  width: 100%;
-  text-align: center;
-}
-
-.profile-logo{
-  width: 85px;
-  border-radius: 50%;
-  margin-left: 19%
-}
-
 
 .sidebtn{
   margin-left: 20px;
@@ -133,9 +112,9 @@ table {
   margin: 0% 0% 0% 8%;
 }
 
-/* td {
-  display: flex;
-} */
+td {
+  margin-bottom: 5%;
+}
 
 th.mat-sort-header-sorted {
   color: black;

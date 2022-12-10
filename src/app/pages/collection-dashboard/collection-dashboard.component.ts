@@ -3,8 +3,7 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
-import { ApproveComponent } from 'src/app/approve/approve.component';
-import { EditComponent } from 'src/app/edit/edit.component';
+import { ApproveComponent } from 'src/app/shared/approve/approve.component';
 
 
 const ELEMENT_DATA: SalesTicketElement[] = [
@@ -57,6 +56,9 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   styleUrls: ['./collection-dashboard.component.css']
 })
 export class CollectionDashboardComponent implements OnInit {
+
+  public nametoDisplay = 'Elgie Valle';
+  public roletoDisplay = 'Collection In Charge';
 
   displayedColumns: string[] = [
     'id',

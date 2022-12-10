@@ -1,13 +1,6 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" opened>
-    <img class="company-logo" src="https://asi-ees.com/pos_article/20171018/images/logo-asi.png">
-    <div class="profile">
-      <img class="profile-logo" src="https://png.pngitem.com/pimgs/s/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="Avatar">
-      <div class="profile-headings">
-        <a>Chin</a>
-        <a>Billing in Charge</a>
-      </div>
-    </div>
+    <app-sidenav [displayName]="nametoDisplay" [displayRole]="roletoDisplay"></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
 <app-navbar></app-navbar>
@@ -41,7 +34,7 @@
 
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef>Description</th>
-      <td mat-cell *matCellDef="let element">{{ element.description }}</td>    
+      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
     </ng-container>
 
     <ng-container matColumnDef="servicecharge">
@@ -50,7 +43,10 @@
     </ng-container>
 
       <ng-container matColumnDef="btn">
-        <th mat-header-cell *matHeaderCellDef>Upload Invoice</th>
+        <th mat-header-cell *matHeaderCellDef>
+          <a class="mat-header">Upload</a>
+          <a class="mat-header remove">Remove</a>
+        </th>
         <td mat-cell *matCellDef="let element" class="issue-btns">
           <button class="sidebtn submit" mat-flat-button color="primary" (click)="onUpload()"><mat-icon>save_alt</mat-icon></button>
           <button class="sidebtn remove" mat-flat-button color="primary" (click)="removeRow(element.id)"><mat-icon>delete</mat-icon></button>
@@ -61,6 +57,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
   </div>
+  <app-footer></app-footer>
 </mat-sidenav-content>
 </mat-sidenav-container>
 

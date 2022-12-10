@@ -83,6 +83,11 @@ h2{
   width: 20%;
 }
 
+.mat-header{
+  margin-left: 11%;
+  margin-bottom: 10px;
+}
+
 .profile{
   display: inline-table;
   margin: 10% 25% 0% 25%;
@@ -133,9 +138,9 @@ table {
   margin: 0% 0% 0% 8%;
 }
 
-/* td {
-  display: flex;
-} */
+td {
+  margin-bottom: 5%;
+}
 
 th.mat-sort-header-sorted {
   color: black;

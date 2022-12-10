@@ -58,6 +58,10 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 
 export class DashboardComponent implements OnInit {
 
+  public nametoDisplay = 'Juan Dela Cruz';
+  public roletoDisplay = 'User Client';
+
+
   displayedColumns: string[] = [
     'id',
     'datefile',

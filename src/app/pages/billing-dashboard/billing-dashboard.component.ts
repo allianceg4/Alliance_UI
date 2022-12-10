@@ -55,6 +55,9 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 })
 export class BillingDashboardComponent implements OnInit {
 
+  public nametoDisplay = 'Chin Sanchez';
+  public roletoDisplay = 'Billing In Charge';
+
   displayedColumns: string[] = [
     'id',
     'datefile',
@@ -65,8 +68,6 @@ export class BillingDashboardComponent implements OnInit {
     'btn',
   ];
   dataSource = ELEMENT_DATA;
-
-
 
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
