@@ -16,6 +16,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './shared/app-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
@@ -29,7 +30,8 @@ import { CollectionDashboardComponent } from './pages/collection-dashboard/colle
 import { ApproveComponent } from './shared/approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ModalDescriptionComponent } from './pages/client-side/modal-description/modal-description.component';
+import { SubmitComponent } from './submit/submit.component';
+import { TreasuryDashboardComponent } from './pages/treasury-dashboard/treasury-dashboard.component';
 
 
 const materialModules = [
@@ -58,7 +60,8 @@ const materialModules = [
     CollectionDashboardComponent,
     ApproveComponent,
     UploadFormComponent,
-    ModalDescriptionComponent
+    SubmitComponent,
+    TreasuryDashboardComponent
   ],
 
   imports: [

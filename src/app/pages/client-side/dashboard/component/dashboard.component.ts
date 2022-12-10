@@ -49,6 +49,7 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   },
 ];
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
