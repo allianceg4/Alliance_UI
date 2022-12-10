@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
-import { AddTicketFormComponent } from '../../shared/add-ticket-form/add-ticket-form.component';
 import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
@@ -48,6 +47,7 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   },
 ];
 
+
 @Component({
   selector: 'app-billing-dashboard',
   templateUrl: './billing-dashboard.component.html',
@@ -55,13 +55,16 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 })
 export class BillingDashboardComponent implements OnInit {
 
+  public nametoDisplay = 'Chin Sanchez';
+  public roletoDisplay = 'Billing In Charge';
+
   displayedColumns: string[] = [
     'id',
-    'assignee',
+    'datefile',
     'status',
     'subject',
     'description',
-    'tracker',
+    'servicecharge',
     'btn',
   ];
   dataSource = ELEMENT_DATA;
@@ -69,6 +72,10 @@ export class BillingDashboardComponent implements OnInit {
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
   onCreateConformSlip() {
+    this.addDialog.open(BillingFormComponent);
+  }
+
+  onUpload() {
     this.addDialog.open(BillingFormComponent);
   }
 

@@ -3,7 +3,7 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
-import { ApproveComponent } from 'src/app/approve/approve.component';
+import { ApproveComponent } from 'src/app/shared/approve/approve.component';
 
 
 const ELEMENT_DATA: SalesTicketElement[] = [
@@ -48,6 +48,8 @@ const ELEMENT_DATA: SalesTicketElement[] = [
     servicecharge: 25.00,
   },
 ];
+
+
 @Component({
   selector: 'app-collection-dashboard',
   templateUrl: './collection-dashboard.component.html',
@@ -55,13 +57,16 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 })
 export class CollectionDashboardComponent implements OnInit {
 
+  public nametoDisplay = 'Elgie Valle';
+  public roletoDisplay = 'Collection In Charge';
+
   displayedColumns: string[] = [
     'id',
-    'assignee',
+    'datefile',
     'status',
     'subject',
     'description',
-    'tracker',
+    'servicecharge',
     'btn',
   ];
   dataSource = ELEMENT_DATA;
@@ -79,9 +84,8 @@ export class CollectionDashboardComponent implements OnInit {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
   }
 
-  openApprovedDialog(): void {
-    this.dialog.open<string>(ApproveComponent);
-    console.log('Approved');
+  onUpload() {
+    this.addDialog.open(ApproveComponent);
   }
 
 }

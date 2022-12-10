@@ -21,7 +21,7 @@ import { AppRoutingModule } from './shared/app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { SharedModule } from './shared/shared.module';
 import { AddTicketFormComponent } from './shared/add-ticket-form/add-ticket-form.component';
-import { EditComponent } from './edit/edit.component';
+import { EditComponent } from './shared/edit/edit.component';
 import { SalesDashboardComponent } from './pages/sales-dashboard/component/sales-dashboard.component';
 import { CustomerIssuesComponent } from './pages/customer-issues/customer-issues.component';
 import { ConformSlipComponent } from './shared/conform-slip/conform-slip.component';
@@ -30,10 +30,11 @@ import { BillingFormComponent } from './shared/billing-form/billing-form.compone
 import { TransactionFormComponent } from './pages/transaction-form/transaction-form.component';
 import { TransactionModalComponent } from './shared/transaction-modal/transaction-modal.component';
 import { CollectionDashboardComponent } from './pages/collection-dashboard/collection-dashboard.component';
-import { ApproveComponent } from './approve/approve.component';
+import { ApproveComponent } from './shared/approve/approve.component';
 import { UploadFormComponent } from './shared/upload-form/upload-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LightboxModule } from 'ngx-lightbox';
+import { SubmitComponent } from './submit/submit.component';
+import { TreasuryDashboardComponent } from './pages/treasury-dashboard/treasury-dashboard.component';
 
 const materialModules = [
   MatExpansionModule,
@@ -66,10 +67,11 @@ const materialModules = [
     CustomerIssuesComponent,
     TransactionFormComponent,
     TransactionModalComponent,
+    SubmitComponent,
+    TreasuryDashboardComponent,
   ],
 
   imports: [
-    LightboxModule,
     BrowserModule,
     RouterModule,
     AppRoutingModule,

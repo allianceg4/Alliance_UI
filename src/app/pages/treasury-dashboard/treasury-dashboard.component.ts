@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
-import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-slip.component';
-import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
-import { ModalDescriptionComponent } from '../../modal-description/modal-description.component';
+import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
+import { ApproveComponent } from 'src/app/shared/approve/approve.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -49,18 +48,15 @@ const ELEMENT_DATA: SalesTicketElement[] = [
   },
 ];
 
-
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-treasury-dashboard',
+  templateUrl: './treasury-dashboard.component.html',
+  styleUrls: ['./treasury-dashboard.component.css']
 })
+export class TreasuryDashboardComponent implements OnInit {
 
-export class DashboardComponent implements OnInit {
-
-  public nametoDisplay = 'Juan Dela Cruz';
-  public roletoDisplay = 'User Client';
-
+  public nametoDisplay = 'Beth Dimagiba';
+  public roletoDisplay = 'Treasure In Charge';
 
   displayedColumns: string[] = [
     'id',
@@ -76,27 +72,19 @@ export class DashboardComponent implements OnInit {
   constructor(private addDialog: MatDialog, public dialog: Dialog) {}
 
   onCreateConformSlip() {
-    this.addDialog.open(ConformSlipComponent);
+    this.addDialog.open(BillingFormComponent);
   }
 
-  onUpload() {
-    this.addDialog.open(UploadFormComponent);
-  }
-
-  showDescription() {
-    this.addDialog.open(ModalDescriptionComponent, {
-      data:{
-        subject: 'Recruit Report',
-        description: 'To record things'
-      }
-    });
+  ngOnInit(): void {
   }
 
   removeRow(id: number) {
     this.dataSource = this.dataSource.filter((u) => u.id !== id);
   }
 
-  ngOnInit(): void {
+  onUpload() {
+    this.addDialog.open(ApproveComponent);
   }
 
 }
+
