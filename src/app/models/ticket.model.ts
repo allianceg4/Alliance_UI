@@ -4,7 +4,7 @@ export interface TicketElement {
   statusID: number;
   subject: string;
   description: string;
-  date: Date;
+  date: any;
   amount: number;
   hasconfirm: number;
   hasproof: number;
