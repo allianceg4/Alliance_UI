@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-slip.component';
 import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
-import { ModalDescriptionComponent } from '../../modal-description/modal-description.component';
+import { ModalDescriptionComponent } from '../../../../shared/modal-description/modal-description.component';
 import { FileIssueComponent } from 'src/app/shared/file-issue/file-issue.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [

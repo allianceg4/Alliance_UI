@@ -3,6 +3,7 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
+import { ModalDescriptionComponent } from 'src/app/shared/modal-description/modal-description.component';
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -77,6 +78,15 @@ export class BillingDashboardComponent implements OnInit {
 
   onUpload() {
     this.addDialog.open(BillingFormComponent);
+  }
+
+  showDescription() {
+    this.addDialog.open(ModalDescriptionComponent, {
+      data:{
+        subject: 'Recruit Report',
+        description: 'To record things'
+      }
+    })
   }
 
   ngOnInit(): void {
