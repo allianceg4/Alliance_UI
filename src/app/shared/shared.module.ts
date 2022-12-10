@@ -46,7 +46,7 @@ const sharedComponents = [
   NavbarComponent,
   SuccessfulDialogComponent,
   FooterComponent,
-  SidenavComponent
+  SidenavComponent,
 ];
 
 @NgModule({
