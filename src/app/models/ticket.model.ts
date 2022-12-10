@@ -1,10 +1,15 @@
 export interface TicketElement {
-  datefile: string;
-  id: number;
-  status: string;
+  ticketID: number;
+  userID: number;
+  statusID: number;
   subject: string;
   description: string;
-  servicecharge: number;
-  btn1: string;
-  btn2: string;
+  date: Date;
+  amount: number;
+  hasconfirm: number;
+  hasproof: number;
+  transaction: number;
+  hasinvoice: number;
+  ismatched: number;
+  iscredited: number;
 }

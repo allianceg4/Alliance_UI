@@ -6,6 +6,10 @@ import { ConformSlipComponent } from '../../../../shared/conform-slip/conform-sl
 import { UploadFormComponent } from 'src/app/shared/upload-form/upload-form.component';
 import { HttpClient } from '@angular/common/http';
 import { ModalDescriptionComponent } from '../../modal-description/modal-description.component';
+import { first, map, Observable } from 'rxjs';
+import { TicketService } from 'src/app/ticket.service';
+import { TicketElement } from 'src/app/models/ticket.model';
+
 
 const ELEMENT_DATA: SalesTicketElement[] = [
   {
@@ -57,7 +61,6 @@ const ELEMENT_DATA: SalesTicketElement[] = [
 })
 
 export class DashboardComponent implements OnInit {
-
   displayedColumns: string[] = [
     'id',
     'datefile',
@@ -67,9 +70,14 @@ export class DashboardComponent implements OnInit {
     'servicecharge',
     'btn',
   ];
+
   dataSource = ELEMENT_DATA;
 
-  constructor(private addDialog: MatDialog, public dialog: Dialog, private http:HttpClient) {}
+  constructor(
+    private addDialog: MatDialog, 
+    public dialog: Dialog, 
+    private http: HttpClient,
+    private ticketService: TicketService) {}
 
   onCreateConformSlip() {
     this.addDialog.open(ConformSlipComponent);
@@ -83,10 +91,18 @@ export class DashboardComponent implements OnInit {
     this.addDialog.open(ModalDescriptionComponent);
   }
 
+  getData(): Observable<any[]> {
+    return this.http
+        .get<any[]>('http://localhost:8080/tickets') 
+        .pipe(map(data => data[1]));
+  }
+
   ngOnInit(): void {
-    this.http.get('http://localhost:8080/tickets').subscribe( result => {
-      console.log(result);
+
+    this.ticketService.getTickets().subscribe((data: any) => {
+      console.log(data.data[0]); // Calls the first element of the array
     })
+
   }
 
 }
