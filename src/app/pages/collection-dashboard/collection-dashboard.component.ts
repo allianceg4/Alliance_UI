@@ -3,7 +3,7 @@ import { SalesTicketElement } from 'src/app/models/sales_tickets.model';
 import { MatDialog } from '@angular/material/dialog';
 import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import { BillingFormComponent } from '../../shared/billing-form/billing-form.component';
-import { ApproveComponent } from 'src/app/approve/approve.component';
+import { ApproveComponent } from 'src/app/shared/approve/approve.component';
 
 
 const ELEMENT_DATA: SalesTicketElement[] = [
