@@ -1,73 +1,106 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" opened>
-    <img class="company-logo" src="https://asi-ees.com/pos_article/20171018/images/logo-asi.png">
+    <img
+      class="company-logo"
+      src="https://asi-ees.com/pos_article/20171018/images/logo-asi.png"
+    />
     <div class="profile">
-      <img class="profile-logo" src="https://png.pngitem.com/pimgs/s/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="Avatar">
+      <img
+        class="profile-logo"
+        src="https://png.pngitem.com/pimgs/s/35-350426_profile-icon-png-default-profile-picture-png-transparent.png"
+        alt="Avatar"
+      />
       <div class="profile-headings">
         <a>Juan Dela Cruz</a>
         <a>Official Client</a>
       </div>
     </div>
-    <div class="nav-btns">
-    </div>
+    <div class="nav-btns"></div>
   </mat-sidenav>
   <mat-sidenav-content>
-<app-navbar></app-navbar>
+    <app-navbar></app-navbar>
 
-<div class="dashboard-content">
-  <div class="dashboard-headings">
-    <h2>Latest Issue</h2>
-    <a>Your latest ticket Issue</a>
-    <button class="file-issue" mat-flat-button color="success" (click)="onCreateConformSlip()">+ File Issue</button>
-  </div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation">
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>Issue ID</th>
-        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-      </ng-container>
+    <div class="dashboard-content">
+      <div class="dashboard-headings">
+        <h2>Latest Issue</h2>
+        <a>Your latest ticket Issue</a>
+        <button
+          class="file-issue"
+          mat-flat-button
+          color="success"
+          (click)="onCreateConformSlip()"
+        >
+          + File Issue
+        </button>
+      </div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Issue ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+        </ng-container>
 
-      <ng-container matColumnDef="subject">
-        <th mat-header-cell *matHeaderCellDef>Subject</th>
-        <td mat-cell *matCellDef="let element"><a class="tab-btn subject" mat-flat-button color="primary">Click to View</a></td>
-      </ng-container>
+        <ng-container matColumnDef="subject">
+          <th mat-header-cell *matHeaderCellDef>Subject</th>
+          <td mat-cell *matCellDef="let element">
+            <a class="tab-btn subject" mat-flat-button color="primary"
+              >Click to View</a
+            >
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="datefile">
-        <th mat-header-cell *matHeaderCellDef>Date Filled</th>
-        <td mat-cell *matCellDef="let element">{{ element.datefile }}</td>
-      </ng-container>
+        <ng-container matColumnDef="datefile">
+          <th mat-header-cell *matHeaderCellDef>Date Filled</th>
+          <td mat-cell *matCellDef="let element">{{ element.datefile }}</td>
+        </ng-container>
 
-      <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef>Status</th>
-        <td mat-cell *matCellDef="let element">{{ element.status }}</td>
-      </ng-container>
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+        </ng-container>
 
-      <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef>Description</th>
-        <td mat-cell *matCellDef="let element"><a class="tab-btn subject" mat-flat-button color="primary">Click to View</a></td>
-      </ng-container>
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let element">
+            <a class="tab-btn subject" mat-flat-button color="primary"
+              >Click to View</a
+            >
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="servicecharge">
-        <th mat-header-cell *matHeaderCellDef>Service Charge</th>
-        <td mat-cell *matCellDef="let element">{{ element.servicecharge }}</td>
-      </ng-container>
+        <ng-container matColumnDef="servicecharge">
+          <th mat-header-cell *matHeaderCellDef>Service Charge</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.servicecharge }}
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="btn">
-        <th mat-header-cell *matHeaderCellDef>
-          <a class="mat-header">Submit</a>
-          <a class="mat-header">Resolve</a>
-          <a class="mat-header">Cancel</a>
-        </th>
-        <td mat-cell *matCellDef="let element" class="issue-btns">
-          <button class="sidebtn submit" mat-flat-button color="primary" (click)="onUpload()"><mat-icon>save_alt</mat-icon></button>
-          <button class="sidebtn resolve" mat-flat-button color="primary"><mat-icon>build</mat-icon></button>
-          <button class="sidebtn remove" mat-flat-button color="primary"><mat-icon>delete</mat-icon></button>
-        </td>
-      </ng-container>
+        <ng-container matColumnDef="btn">
+          <th mat-header-cell *matHeaderCellDef>
+            <a class="mat-header">Submit</a>
+            <a class="mat-header">Resolve</a>
+            <a class="mat-header">Cancel</a>
+          </th>
+          <td mat-cell *matCellDef="let element" class="issue-btns">
+            <button
+              class="sidebtn submit"
+              mat-flat-button
+              color="primary"
+              (click)="onUpload()"
+            >
+              <mat-icon>save_alt</mat-icon>
+            </button>
+            <button class="sidebtn resolve" mat-flat-button color="primary">
+              <mat-icon>build</mat-icon>
+            </button>
+            <button class="sidebtn remove" mat-flat-button color="primary">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-  </div>
-</mat-sidenav-content>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
-
