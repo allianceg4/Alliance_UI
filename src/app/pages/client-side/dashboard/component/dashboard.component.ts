@@ -84,7 +84,12 @@ export class DashboardComponent implements OnInit {
   }
 
   showDescription() {
-    this.addDialog.open(ModalDescriptionComponent);
+    this.addDialog.open(ModalDescriptionComponent, {
+      data:{
+        subject: 'Recruit Report',
+        description: 'To record things'
+      }
+    });
   }
 
   ngOnInit(): void {

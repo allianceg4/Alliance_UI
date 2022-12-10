@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DialogData } from 'src/app/models/dialog.model';
 
 @Component({
   selector: 'app-modal-description',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalDescriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   ngOnInit(): void {
   }
