@@ -92,6 +92,10 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  removeRow(id: number) {
+    this.dataSource = this.dataSource.filter((u) => u.id !== id);
+  }
+
   ngOnInit(): void {
   }
 
